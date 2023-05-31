@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body {
+        html, body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            background-color: #efefef;
         }
 
         .container {
-            margin-top: 50px;
+            margin-top: 5em;
+            height: 100%;
+            background: #536976, #292E49;
         }
 
         h1 {
@@ -38,22 +40,77 @@
             color: #007bff;
             font-weight: bold;
         }
+        .image{
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="text-center">
-            <h1>Lianghao Zhang</h1>
-            <h2>Doctoral Student &amp; Computer Graphics</h2>
-        </div>
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <p>Hello, I'm Zhang Lianghao, a Ph.D. student with research interests in computer graphics and computer vision. Currently, I'm a third-year Ph.D. student at Tianjin University. I obtained my master's and bachelor's degrees from Tianjin University in 2018 and 2014, respectively. I am eager to utilize my knowledge to transform the real world and bring forth technologies that make our world more beautiful and convenient.</p>
-                <p>If you have any interesting projects or opportunities, feel free to **get in touch** with me.</p>
+            <div class="row">
+                <div class="col-md-2">
+                    <img class="image profile-img" src="imgs/my.png" alt="Profile Photo">
+                </div>
+                <div class="col-md-10">
+                    <div class="text-left">
+                        <h1>Lianghao Zhang</h1>
+                        <h2>Doctoral Student &amp; Computer Graphics</h2>
+                    </div>
+                    <p>Hello, I'm Zhang Lianghao, a Ph.D. student with research interests in computer graphics and computer vision. Currently, I'm a third-year Ph.D. student at Tianjin University (supervised by <a href="http://cic.tju.edu.cn/faculty/zhangjiawan/index.htm">Prof.Jiawan Zhang</a>). I obtained my master's and bachelor's degrees from Tianjin University in 2018 and 2014, respectively. I am eager to utilize my knowledge to transform the real world and bring forth technologies that make our world more beautiful and convenient.</p>
+                    <!-- <p>If you have any interesting projects or opportunities, feel free to **get in touch** with me.</p> -->
+
+                </div>
+            </div>
+            <!-- <div style="width: 100%;">
+                <h2></h2>
+                <hr style="margin-top:0px"> 
+            </div> -->
+
+            <div style="width: 100%;">
+                <h2>Publications</h2>
+                <hr style="margin-top:0px"> 
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                        <img class="image" src="imgs/Teaser.png"> 
+                    </div>
+                    <div class="col-md-9">
+                        <h4>Deep SVBRDF Estimation from Single Image under Learned Planar Lighting</h4>
+                        <hr style="margin-top:0px">
+                        <div class="text-left">
+                            <div>
+                                <p>
+                                <a href="#">Lianghao Zhang</a>, Fangzhou Gao, Li Wang,
+                                <a href="http://cic.tju.edu.cn/faculty/yuminjing/index.html">Minjing Yu</a>, Jiamin Cheng,
+                                <a href="http://cic.tju.edu.cn/faculty/zhangjiawan/index.htm">Jiawan Zhang</a>
+                                </p>
+                            </div>
+                            <div id="project-details" class="collapse", style="text-align: justify;">
+                                <p>
+                                    Estimating spatially varying BRDF from a single image without complicated acquisition devices is a challenging problem. In this paper, a deep learning based method was proposed to improve the capture efficiency of single image significantly by learning the lighting pattern of a planar light source, and reconstruct high-quality SVBRDF by learning the global correlation prior of the input image.  
+                                In our framework, the lighting pattern optimization is embedded in the training process of the network by introducing an online rendering process.
+                                The rendering process not only renders images online as the input of network, 
+                                but also efficiently back propagates gradients from the network to optimize the lighting pattern.
+                                Once trained, the network can estimate SVBRDFs from real photographs captured under the learned lighting pattern. 
+                                Additionally, we describe an onsite capture setup that needs no careful calibration to capture the material sample efficiently. In particular, even a cell phone can be used for illumination. We demonstrate on synthetic and real data that our method could recover a wide range of materials from a single image casually captured under the learned lighting pattern.
+                                </p>
+                            </div>
+                            <h5>To appear in Proc. SIGGRAPH 2023</h5>
+                            <button class="btn btn-dark" data-toggle="collapse" data-target="#project-details">Abstract</button>
+                            <a href="https://klkjjhjkhjhg.github.io/singleplane" class="btn btn-primary">Project</a>
+                            <a href="#" class="btn btn-success">Code (Coming soon) </a>
+                            <!-- <a href="#" class="btn btn-secondary"></a> -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="text-center">
-            <p><a href="mailto:lianghaozhang@tju.edu.cn">lianghaozhang@tju.edu.cn</a> | <a href="https://github.com/klkjjhjkhjhg">github</a></p>
+        <div class="text-center"style="margin-top: 20px;">
+            <p><a href="mailto:lianghaozhang@tju.edu.cn">e-mail</a> | <a href="https://github.com/klkjjhjkhjhg">github</a></p>
         </div>
     </div>
 
