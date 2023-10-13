@@ -4,33 +4,33 @@
     <title>Lianghao Zhang's Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+
     <style>
         html, body {
             font-family: Arial, sans-serif;
-            background-color: #efefef;
+            background-color: #f2f2f2;
         }
 
-        .container {
-            margin-top: 5em;
+        #background {
             height: 100%;
-            background: #536976, #292E49;
+            background: #fcfcfc;
+            padding: 0;
         }
 
         h1 {
-            color: #333333;
             font-size: 32px;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
         h2 {
-            color: #666666;
             font-size: 24px;
             margin-bottom: 10px;
         }
 
         p {
-            color: #999999;
+            
             font-size: 16px;
             line-height: 1.5;
             margin-bottom: 20px;
@@ -40,82 +40,252 @@
             color: #007bff;
             font-weight: bold;
         }
-        .image{
+        .textsection {
+            font-size: 14pt;
+            /*font-weight: bold;*/
+            color: #333;
+            text-align: left;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .papericon {
+            border-radius: 8px;
+            -moz-box-shadow: 3px 3px 6px #888;
+            -webkit-box-shadow: 3px 3px 6px #888;
+            box-shadow: 3px 3px 6px #888;
+            height: 150px;
+            width: 200px;
+        }
+        .papercontent{
+            margin-bottom: 30px;
+        }
+        .blockcontainer{
             width: 100%;
-            height: auto;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="row">
-                <div class="col-md-2">
-                    <img class="image profile-img" src="imgs/my.png" alt="Profile Photo">
-                </div>
-                <div class="col-md-10">
-                    <div class="text-left">
-                        <h1>Lianghao Zhang</h1>
-                        <h2>Doctoral Student &amp; Computer Graphics</h2>
-                    </div>
-                    <p>Hello, I'm Zhang Lianghao, a Ph.D. student with research interests in computer graphics and computer vision. Currently, I'm a third-year Ph.D. student at Tianjin University (supervised by <a href="http://cic.tju.edu.cn/faculty/zhangjiawan/index.htm">Prof.Jiawan Zhang</a>). I obtained my master's and bachelor's degrees from Tianjin University in 2018 and 2014, respectively. I am eager to utilize my knowledge to transform the real world and bring amazing technologies that make our world more beautiful and convenient.</p>
-                    <!-- <p>If you have any interesting projects or opportunities, feel free to **get in touch** with me.</p> -->
-
+    <div id="background" class="container shadow-lg">
+        <nav class="navbar navbar-expand-lg mb-4 shadow-sm navbar-dark navbar-text-light" style="padding: 0.2rem 0rem; background:#333A56; color: #fff">
+            <div class="container">
+                <a class="navbar-brand" href="#">Lianghao Zhang's Homepage</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#publications">Publications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <!-- <div style="width: 100%;">
-                <h2></h2>
-                <hr style="margin-top:0px"> 
-            </div> -->
-
-            <div style="width: 100%;">
-                <h2>Publications</h2>
-                <hr style="margin-top:0px"> 
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-3">
-                        <img class="image" src="imgs/Teaser.png"> 
+        </nav>
+        <div id="container" class="container row justify-content-center mx-auto ">
+            <div id="metainfo" class="blockcontainer">
+                <div class="container" style="padding: 0rem 1rem 2rem 2rem">
+                <div class="row">
+                    <div class="col-md-1">
+                        
                     </div>
-                    <div class="col-md-9">
-                        <h4>Deep SVBRDF Estimation from Single Image under Learned Planar Lighting</h4>
-                        <hr style="margin-top:0px">
+                    <div class="col-md-3">
+                        <img class="image profile-img" src="imgs/my.png" alt="Profile Photo" style="width: 80%;">
+                    </div>
+                    <div class="col-md-3">
+                        
+                    </div>
+                    <div class="col-md-4">
                         <div class="text-left">
-                            <div>
-                                <p>
-                                <a href="#">Lianghao Zhang</a>, Fangzhou Gao, Li Wang,
-                                <a href="http://cic.tju.edu.cn/faculty/yuminjing/index.html">Minjing Yu</a>, Jiamin Cheng,
-                                <a href="http://cic.tju.edu.cn/faculty/zhangjiawan/index.htm">Jiawan Zhang</a>
-                                </p>
+                            <h1>Lianghao Zhang</h1>
+                            <p>Tianjin University <br> Ph.D. student <br>Computer Graphics &amp; Computer Vision</p>
+                        </div>
+                        <div class="text-left" style="margin-top: 0px;">
+                            <a href="mailto:lianghaozhang@tju.edu.cn" class="btn btn-light btn-circle btn-lg shadow-sm" style="margin-right: 30px;"><i class="bi bi-envelope"></i></a>
+                            <a href="https://github.com/klkjjhjkhjhg" class="btn btn-light btn-circle btn-lg shadow-sm" style="margin-right: 30px;"><i class="bi bi-github"></i></a>
+                        </div>
+                        <!-- <p>If you have any interesting projects or opportunities, feel free to **get in touch** with me.</p> -->
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            
+            <div id="about" class="blockcontainer">
+                <p class="textsectionheader2 textsection" style="width: 100%; font-weight: bold;"> About</p>
+                <div class="container" style="padding: 0">
+                    <p>Hello, I'm Lianghao Zhang, a Ph.D. student with research interests in computer graphics and computer vision. Currently, I'm a third-year Ph.D. student at Tianjin University (supervised by <a href="http://cic.tju.edu.cn/faculty/zhangjiawan/index.htm">Prof.Jiawan Zhang</a>). I obtained my master's and bachelor's degrees from Tianjin University in 2018 and 2014, respectively. I am eager to utilize my knowledge to transform the real world and bring amazing technologies that make our world more beautiful and convenient.</p>
+                </div>
+            </div>
+
+            <div id="publications" class="blockcontainer">
+                <p class="textsectionheader2 textsection" style="width: 100%; font-weight: bold;"> Publications</p>
+                <div class="papercontent container" style="padding: 0">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            <img class="image papericon" src="imgs/zhanglianghao2023.png"> 
+                        </div>
+                        <div class="col-md-9">
+                            <p style="font-size: 18px; font-weight: bold; margin-bottom: 5px">Deep SVBRDF Estimation from Single Image under Learned Planar Lighting</p>
+                            <hr style="margin-top:0px; margin-bottom:5px">
+                            <div class="text-left">
+                                <div>
+                                    <p>
+                                    <a href="#" style="color:#000; font-weight: bold;">Lianghao Zhang</a>, Fangzhou Gao, 
+                                    <a href="https://cgliwang.github.io">Li Wang</a>,
+                                    <a href="http://cic.tju.edu.cn/faculty/yuminjing/index.html">Minjing Yu</a>, Jiamin Cheng,
+                                    <a href="http://cic.tju.edu.cn/faculty/zhangjiawan/index.htm">Jiawan Zhang</a>
+                                    <br>
+                                    ACM SIGGRAPH 2023 Conference Proceedings, Article 48, 1-11.
+                                    </p>
+                                </div>
+                                <div id="zhanglianghao2023" class="collapse", style="text-align: justify;">
+                                    <p>
+                                        Estimating spatially varying BRDF from a single image without complicated acquisition devices is a challenging problem. In this paper, a deep learning based method was proposed to improve the capture efficiency of single image significantly by learning the lighting pattern of a planar light source, and reconstruct high-quality SVBRDF by learning the global correlation prior of the input image.  
+                                    In our framework, the lighting pattern optimization is embedded in the training process of the network by introducing an online rendering process.
+                                    The rendering process not only renders images online as the input of network, 
+                                    but also efficiently back propagates gradients from the network to optimize the lighting pattern.
+                                    Once trained, the network can estimate SVBRDFs from real photographs captured under the learned lighting pattern. 
+                                    Additionally, we describe an onsite capture setup that needs no careful calibration to capture the material sample efficiently. In particular, even a cell phone can be used for illumination. We demonstrate on synthetic and real data that our method could recover a wide range of materials from a single image casually captured under the learned lighting pattern.
+                                    </p>
+                                </div>
+                                <div class="buttongroup">
+                                    <button class="btn btn-dark" data-toggle="collapse" data-target="#zhanglianghao2023">Abstract</button>
+                                    <a href="https://klkjjhjkhjhg.github.io/sig23p1/" class="btn btn-primary">Project</a>
+                                    <!-- <a href="#" class="btn btn-success">Code (Coming soon) </a> -->
+                                </div>
+                                <!-- <a href="#" class="btn btn-secondary"></a> -->
                             </div>
-                            <div id="project-details" class="collapse", style="text-align: justify;">
-                                <p>
-                                    Estimating spatially varying BRDF from a single image without complicated acquisition devices is a challenging problem. In this paper, a deep learning based method was proposed to improve the capture efficiency of single image significantly by learning the lighting pattern of a planar light source, and reconstruct high-quality SVBRDF by learning the global correlation prior of the input image.  
-                                In our framework, the lighting pattern optimization is embedded in the training process of the network by introducing an online rendering process.
-                                The rendering process not only renders images online as the input of network, 
-                                but also efficiently back propagates gradients from the network to optimize the lighting pattern.
-                                Once trained, the network can estimate SVBRDFs from real photographs captured under the learned lighting pattern. 
-                                Additionally, we describe an onsite capture setup that needs no careful calibration to capture the material sample efficiently. In particular, even a cell phone can be used for illumination. We demonstrate on synthetic and real data that our method could recover a wide range of materials from a single image casually captured under the learned lighting pattern.
-                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="papercontent container" style="padding: 0">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            <img class="image papericon" src="imgs/gaofangzhou2023.png"> 
+                        </div>
+                        <div class="col-md-9">
+                            <p style="font-size: 18px; font-weight: bold; margin-bottom: 5px">Transparent Object Reconstruction via Implicit Differentiable Refraction Rendering</p>
+                            <hr style="margin-top:0px; margin-bottom:5px">
+                            <div class="text-left">
+                                <div>
+                                    <p>
+                                    Fangzhou Gao, <a href="#" style="color:#000; font-weight: bold;">Lianghao Zhang</a>,
+                                    <a href="https://cgliwang.github.io">Li Wang</a>, Jiamin Cheng,
+                                    <a href="http://cic.tju.edu.cn/faculty/zhangjiawan/index.htm">Jiawan Zhang</a>
+                                    <br>
+                                    To appear in ACM SIGGRAPH Asia 2023 .
+                                    </p>
+                                </div>
+                                <div id="project-details" class="collapse", style="text-align: justify;">
+                                    <p>
+                                        Reconstructing the geometry of transparent objects has been a
+                                        long-standing challenge. Existing methods rely on complex setups,
+                                        such as manual annotation or darkroom conditions, to obtain ob-
+                                        ject silhouettes and usually require controlled environments with
+                                        designed patterns to infer ray-background correspondence. How-
+                                        ever, these intricate arrangements limit the practical application for
+                                        common users. In this paper, we significantly simplify the setups
+                                        and present a novel method that reconstructs transparent objects
+                                        in unknown natural scenes without manual assistance. Our method
+                                        incorporates two key technologies. Firstly, we introduce a volume
+                                        rendering-based method that estimates object silhouettes by pro-
+                                        jecting the 3D neural field onto 2D images. This automated process
+                                        yields highly accurate multi-view object silhouettes from images
+                                        captured in natural scenes. Secondly, we propose transparent ob-
+                                        ject optimization through differentiable refraction rendering with
+                                        the neural SDF field, enabling us to optimize the refraction ray
+                                        based on color rather than explicit ray-background correspondence.
+                                        Additionally, our optimization includes a ray sampling method to
+                                        supervise the object silhouette at a low computational cost. Exten-
+                                        sive experiments and comparisons demonstrate that our method
+                                        produces high-quality results while offering much more convenient
+                                        setups.
+                                    </p>
+                                </div>
+                                <div class="buttongroup">
+                                    <button class="btn btn-dark" data-toggle="collapse" data-target="#project-details">Abstract</button>
+                                    <a href="https://arkgao.github.io/TransReconProjectWeb/" class="btn btn-primary">Project</a>
+                                    <!-- <a href="#" class="btn btn-success">Code (Coming soon) </a> -->
+                                </div>
+                                <!-- <a href="#" class="btn btn-secondary"></a> -->
                             </div>
-                            <h5>To appear in Proc. SIGGRAPH 2023</h5>
-                            <button class="btn btn-dark" data-toggle="collapse" data-target="#project-details">Abstract</button>
-                            <a href="https://klkjjhjkhjhg.github.io/sig23p1/" class="btn btn-primary">Project</a>
-                            <a href="#" class="btn btn-success">Code (Coming soon) </a>
-                            <!-- <a href="#" class="btn btn-secondary"></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="papercontent container" style="padding: 0">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            <img class="image papericon" src="imgs/wangli2023.png"> 
+                        </div>
+                        <div class="col-md-9">
+                            <p style="font-size: 18px; font-weight: bold; margin-bottom: 5px">DeepBasis: Hand-Held Single-Image SVBRDF Capture via Two-Level Basis Material Model</p>
+                            <hr style="margin-top:0px; margin-bottom:5px">
+                            <div class="text-left">
+                                <div>
+                                    <p>
+                                    <a href="https://cgliwang.github.io">Li Wang</a>,
+                                    <a href="#" style="color:#000; font-weight: bold;">Lianghao Zhang</a>, Fangzhou Gao, 
+                                    <a href="http://cic.tju.edu.cn/faculty/zhangjiawan/index.htm">Jiawan Zhang</a>
+                                    <br>
+                                    To appear in ACM SIGGRAPH Asia 2023 .
+                                    </p>
+                                </div>
+                                <div id="wangli2023" class="collapse", style="text-align: justify;">
+                                    <p>
+                                        Recovering spatial-varying bi-directional reflectance distribution function (SVBRDF) from a single hand-held captured image has
+                                        been a meaningful but challenging task in computer graphics. Ben-
+                                        efiting from the learned data priors, some previous methods can
+                                        utilize the potential material correlations between image pixels
+                                        to serve for SVBRDF estimation. To further reduce the ambigu-
+                                        ity from single-image estimation, it is necessary to integrate ad-
+                                        ditional explicit material correlations. Given the flexible expres-
+                                        sive ability of basis material assumption, we propose DeepBasis,
+                                        a deep-learning-based method integrated with this assumption. It
+                                        jointly predicts basis materials and their blending weights. Then
+                                        the estimated SVBRDF is their linear combination. To facilitate the
+                                        extraction of data priors, we introduce a two-level basis model to
+                                        keep the sufficient representative while using a fixed number of
+                                        basis materials. Moreover, considering the absence of ground-truth
+                                        basis materials and weights during network training, we propose
+                                        a variance-consistency loss and adopt a joint prediction strategy,
+                                        thereby enabling the existing SVBRDF dataset available for train-
+                                        ing. Additionally, due to the hand-held capture setting, the exact
+                                        lighting directions are unknown. We model the lighting direction es-
+                                        timation as a sampling problem and propose an optimization-based
+                                        algorithm to find the optimal estimation. Quantitative evaluation
+                                        and qualitative analysis demonstrate that DeepBasis can produce
+                                        a higher quality SVBRDF estimation than previous methods. All
+                                        source codes will be publicly released.
+                                    </p>
+                                </div>
+                                <button class="btn btn-dark" data-toggle="collapse" data-target="#wangli2023">Abstract</button>
+                                <a href="https://cgliwang.github.io/DeepBasis/" class="btn btn-primary">Project</a>
+                                <a href="https://github.com/CGLiWang/DeepBasis_SVBRDF" class="btn btn-light shadow-sm">Code</a>
+                                <!-- <a href="#" class="btn btn-secondary"></a> -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="text-center"style="margin-top: 20px;">
-            <p><a href="mailto:lianghaozhang@tju.edu.cn">e-mail</a> | <a href="https://github.com/klkjjhjkhjhg">github</a></p>
-        </div>
+
+            <div id="contact">
+                <div class="text-center"style="margin-top: 20px;">
+                    <p><a href="mailto:lianghaozhang@tju.edu.cn">e-mail</a> | <a href="https://github.com/klkjjhjkhjhg">github</a></p>
+                </div>
+            </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
