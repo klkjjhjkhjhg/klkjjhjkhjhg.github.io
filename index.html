@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>Lianghao Zhang's Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -131,13 +132,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#about" style="color: #555;">About</a>
+                            <a class="nav-link" href="#about" data-en="About" data-cn="关于" style="color: #555;">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#publications" style="color: #555;">Publications</a>
+                            <a class="nav-link" href="#publications" data-en="Publications" data-cn="论文列表" style="color: #555;">Publications</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact" style="color: #555;">Contact</a>
+                            <a class="nav-link" href="#contact" data-en="Contact" data-cn="联系方式" style="color: #555;">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="langToggle" class="btn btn-link nav-link" style="color: #555; text-decoration: none; cursor: pointer;">中文 | EN</button>
                         </li>
                     </ul>
                 </div>
@@ -159,8 +163,8 @@
                         <div class="col-md-4">
                             <div class="text-left">
                                 <h1>Lianghao Zhang</h1>
-                                <p style="font-size: 16px; color: #666; margin-bottom: 4px;">Xiaomi | Researcher</p>
-                                <p style="font-size: 14px; color: #888;">Computer Graphics &amp; Computer Vision</p>
+                                <p style="font-size: 16px; color: #666; margin-bottom: 4px;" data-en="Xiaomi | Researcher" data-cn="小米 | 研究员">Xiaomi | Researcher</p>
+                                <p style="font-size: 14px; color: #888;" data-en="Computer Graphics &amp; Computer Vision" data-cn="计算机图形学与计算机视觉">Computer Graphics &amp; Computer Vision</p>
                             </div>
                             <div class="text-left" style="margin-top: 20px;">
                                 <a href="mailto:lianghaozhang@tju.edu.cn" class="btn btn-outline-secondary btn-circle btn-lg" style="margin-right: 16px; border-color: #ddd;"><i class="bi bi-envelope"></i></a>
@@ -172,18 +176,14 @@
             </div>
 
             <div id="about" class="blockcontainer">
-                <p class="textsectionheader2" style="width: 100%;">About</p>
+                <p class="textsectionheader2" style="width: 100%;" data-en="About" data-cn="关于">About</p>
                 <div class="container" style="padding: 0">
-                    <p style="font-size: 15px; line-height: 1.8; color: #444;">Hello, I'm Lianghao Zhang, currently working at Xiaomi. I received my Ph.D. degree from Tianjin University, where I was advised by <a href="http://cic.tju.edu.cn/faculty/zhangjiawan/index.htm" style="color: #555;">Prof. Jiawan Zhang</a>.
-
-                        Currently working on Android system UI graphics, implementing advanced visual effects using Vulkan. I explore novel rendering techniques through research paper review and practical experimentation.
-
-                        My long-term vision is to bridge academic research with real-world system performance, bringing ideas from the lab to production-level mobile experiences.</p>
+                    <p class="about-text" style="font-size: 15px; line-height: 1.8; color: #444;"></p>
                 </div>
             </div>
 
             <div id="publications" class="blockcontainer">
-                <p class="textsectionheader2" style="width: 100%;">Publications</p>
+                <p class="textsectionheader2" style="width: 100%;" data-en="Publications" data-cn="论文列表">Publications</p>
                 <div class="container" style="padding: 0">
                     <div class="pub-item">
                         <div class="row">
@@ -308,7 +308,7 @@
             <div id="contact">
                 <div class="text-center" style="margin-top: 32px; padding: 24px 0; border-top: 1px solid #eee;">
                     <p style="font-size: 14px; color: #888; margin-bottom: 0;">
-                        <a href="mailto:lianghaozhang@tju.edu.cn" style="color: #666;">Email</a>
+                        <a href="mailto:lianghaozhang@tju.edu.cn" data-en="Email" data-cn="邮箱" style="color: #666;">Email</a>
                         <span style="margin: 0 12px; color: #ccc;">/</span>
                         <a href="https://github.com/klkjjhjkhjhg" style="color: #666;">GitHub</a>
                     </p>
@@ -319,6 +319,37 @@
         <script src="js/jquery-3.5.1.slim.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script>
+            var aboutText = {
+                en: "Hello, I'm Lianghao Zhang, currently working at Xiaomi. I received my Ph.D. degree from Tianjin University, where I was advised by <a href='http://cic.tju.edu.cn/faculty/zhangjiawan/index.htm' style='color: #555;'>Prof. Jiawan Zhang</a>.<br>Currently working on Android system UI graphics, implementing advanced visual effects using Vulkan. Through researching cutting-edge papers and practical implementation, I explore novel rendering techniques and visual effects.<br>I am committed to translating academic ideas into production-level mobile experiences.",
+                cn: "您好，我是张梁昊，目前在小米公司工作。我于天津大学获得博士学位，师从<a href='http://cic.tju.edu.cn/faculty/zhangjiawan/index.htm' style='color: #555;'>张加万 教授</a>。<br>目前从事Android系统UI图形开发，使用Vulkan实现高级视觉效果。通过研究前沿论文并落地实践，探索新的渲染技术与视效。<br>我致力于将学术构想转化为生产级移动体验中。"
+            };
+
+            function updateLanguage() {
+                var isCN = document.body.classList.contains('cn');
+                var lang = isCN ? 'cn' : 'en';
+
+                // Update about section
+                document.querySelector('.about-text').innerHTML = aboutText[lang];
+
+                // Update all elements with data-en/data-cn
+                document.querySelectorAll('[data-en]').forEach(function(el) {
+                    if (isCN) {
+                        el.textContent = el.getAttribute('data-cn');
+                    } else {
+                        el.textContent = el.getAttribute('data-en');
+                    }
+                });
+            }
+
+            document.getElementById('langToggle').addEventListener('click', function() {
+                document.body.classList.toggle('cn');
+                updateLanguage();
+            });
+
+            // Initialize on page load
+            updateLanguage();
+        </script>
         <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?cl=080808&w=300&t=n&d=Pc8i-jn_mNrMBbXytnlpkk3fi7LTXCYnAjxkalAvulg&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353"></script>
 
 </body>
